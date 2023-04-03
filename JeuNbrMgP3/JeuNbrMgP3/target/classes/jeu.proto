@@ -1,0 +1,16 @@
+syntax="proto3";
+option java_package="ma.enset.stubs";
+
+service NbrMgService {
+  rpc nbrMagique (stream Request) returns (stream Response);
+}
+
+message Request {
+  int32 nbrMg=1;
+  string user = 2;
+}
+
+message Response {
+  string user = 1;
+  string event = 2;
+}
